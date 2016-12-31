@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 public class GamePanel extends JPanel implements ActionListener{
 
 Ball ball = new Ball();
+
+
 public GamePanel(){
     Timer timer=new Timer(50,this);
     timer.start();
@@ -16,15 +18,19 @@ public GamePanel(){
 }
 
 public void update(){
-    ball.update();
 
-}
+        ball.update();
+  }
 public void paintComponent(Graphics g){
- ball.paint(g);
+    g.setColor(Color.YELLOW);
+    g.fillRect(0,0,500,500);
+
+    ball.paint(g);
 }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         update();
+        repaint();
     }
 }
