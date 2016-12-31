@@ -25,6 +25,6 @@ public void paintComponent(Graphics g){
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        update();
     }
 }
