@@ -8,7 +8,7 @@ public class Pong extends JFrame{
         new Pong();
     }
     public Pong(){
-        setSize(500,350);
+        setSize(500,500);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
