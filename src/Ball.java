@@ -9,7 +9,7 @@ public class Ball {
 
     private int xVelocity = -1; // move
     private int yVelocity = 0;
-    private int size =30;
+    private int size =50;
 
     public void update(){
         x = x + xVelocity;
