@@ -7,8 +7,8 @@ public class Ball {
     private int x=250;
     private int y=250;
 
-    private int xVelocity = -1; // move
-    private int yVelocity = 0;
+    private int xVelocity = -4; // move
+    private int yVelocity = 4;
     private int size =50;
 
     public void update(){
@@ -16,11 +16,15 @@ public class Ball {
         y = y + yVelocity;// - ball down   + ball up
 
         if (x<0  ){
-            xVelocity=1;
+            xVelocity=4;
         } else if(x>500-size){
-            xVelocity = -1;
-
-        } }
+            xVelocity = -4;
+        }
+        if (y<0){
+            yVelocity=4;
+        } else if (y>533-size){
+            yVelocity=-1;}
+    }
     public void paint(Graphics g){
         g.setColor(Color.blue);
         g.fillOval(x,y,size,size);
