@@ -6,4 +6,10 @@ public class Player {
 
 
     private  int yVelocity;
+    private int width=30;
+    private int height=50;
+
+    public Player(){}{
+        
+    }
 }
