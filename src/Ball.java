@@ -10,20 +10,21 @@ public class Ball {
     private int xVelocity = -4; // move
     private int yVelocity = 4;
     private int size =50;
+    
 
     public void update(){
         x = x + xVelocity;
         y = y + yVelocity;// - ball down   + ball up
+        
+        int ballLeft = x + xVelocity;
+        int ballRight = x + xVelocity + size;
+        int ballUp = y + yVelocity;
+        int ballDown = y + yVelocity + size;
 
-        if (x<0  ){
-            xVelocity=4;
-        } else if(x>500-size){
-            xVelocity = -4;
-        }
-        if (y<0){
-            yVelocity=4;
-        } else if (y>533-size){
-            yVelocity=-1;}
+        if(ballDown > 475 || ballUp < 0)
+        	yVelocity *= -1;
+        if(ballLeft < 0 || ballRight > 500)
+        	xVelocity *= -1;
     }
     public void paint(Graphics g){
         g.setColor(Color.blue);
