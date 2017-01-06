@@ -38,7 +38,7 @@ public void paintComponent(Graphics g){
 
     @Override
     public void keyTyped(KeyEvent e) {
-        
+
     }
 
     @Override

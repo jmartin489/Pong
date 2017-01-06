@@ -21,4 +21,4 @@ public class Player {
     public void paint(Graphics g){
 
     }
-}//6_7.45
+}//7
